@@ -212,7 +212,10 @@ function isItAnApple(strings) {
  * [2] Invoking `removeApple` with `['a', 'b', 'c' ]` will return `[ 'a', 'b', 'c' ]`.
  */
 function removeApple(strings) {
-    let apple = strings.filter((arritem))
+    let apple = strings.filter((arrItem) => {
+        return arrItem != "apple"
+    });
+    return apple
 }
 
 /**
@@ -230,8 +233,10 @@ function removeApple(strings) {
  * 
  * [2] Invoking `stringSmash` with `['a', 'b', 'c' ]` will return `abc`.
  */
-function stringSmash( /* code here */ ) {
-    /* code here */
+function stringSmash(strings) {
+    strings.reduce((accum, arritem) => {
+        return accum * arritem;
+    }, 1);
 }
 
 // A local community center is holding a fund raising 5k fun run and has invited
